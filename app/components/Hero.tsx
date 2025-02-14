@@ -17,24 +17,26 @@ const Hero = () => {
         </div>
         
         <Link
-        onClick={(e) => {
-        e.preventDefault();
-        const element = document.getElementById('loveday');
-        const offset = 50;
-        
-        if (element) {
-            const elementPosition = element.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - offset;
+          onClick={(e) => {
+            e.preventDefault();
+            const element = document.getElementById('loveday');
+            const offset = 50;
             
-            window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-            });
-        }
-        }} 
-        href={'#loveday'}>
-          <p className='text-center text-3xl mb-2'>Bấm cái ni đi :&gt;</p>
-          <ChevronDown size={40} className='animate-bounce text-center flex justify-center'/>
+            if (element) {
+              const elementPosition = element.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - offset;
+              
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          }} 
+          href={'#loveday'}
+          className='flex flex-col items-center'
+        >
+          <p className='text-3xl mb-2'>Bấm cái ni đi :&gt;</p>
+          <ChevronDown size={40} className='animate-bounce'/>
         </Link>
       </div>
     </div>
