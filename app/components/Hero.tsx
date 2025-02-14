@@ -20,7 +20,7 @@ const Hero = () => {
         onClick={(e) => {
         e.preventDefault();
         const element = document.getElementById('loveday');
-        const offset = 0;
+        const offset = 50;
         
         if (element) {
             const elementPosition = element.getBoundingClientRect().top;
@@ -34,7 +34,7 @@ const Hero = () => {
         }} 
         href={'#loveday'}>
           <p className='text-center text-3xl mb-2'>Bấm cái ni đi :&gt;</p>
-          <ChevronDown size={40} className='animate-bounce'/>
+          <ChevronDown size={40} className='animate-bounce text-center flex justify-center'/>
         </Link>
       </div>
     </div>
